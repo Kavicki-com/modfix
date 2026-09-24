@@ -1,6 +1,6 @@
 /* =====================================================================
    ModFix — scripts do site
-   1) Catálogo de produtos (17 itens do Figma)
+   1) Catálogo de produtos (25 itens)
    2) Texturas decorativas de quadradinhos
    3) Scroll suave da navegação
    ===================================================================== */
@@ -10,24 +10,33 @@
   /* ------------------------------------------------------------------
      1) PRODUTOS
      ------------------------------------------------------------------ */
+  /* size vazio = "Medida personalizada para o cliente" */
   var PRODUCTS = [
-    { name: 'Gôndola Central Dupla Face',   desc: 'Acabamento Eletrostático Azul, 5 Prateleiras', code: 'MOD-GC-01', img: '01-gondola-central-dupla-face' },
-    { name: 'Balcão Check-out Farmácia',    desc: 'Estrutura em Aço com Cestos Aramados',         code: 'MOD-CF-02', img: '02-balcao-checkout-farmacia' },
-    { name: 'Gôndola de Parede',            desc: 'Chapa de Aço Tratado, Testeiras Vermelhas',    code: 'MOD-GP-03', img: '03-gondola-de-parede' },
-    { name: 'Gôndola Central Grande',       desc: 'Dupla Face, Alta Capacidade, Azul',            code: 'MOD-GG-04', img: '04-gondola-central-grande' },
-    { name: 'Gôndola de Parede Grande',     desc: 'Testeiras Vermelhas, 6 Prateleiras',           code: 'MOD-GP-05', img: '05-gondola-parede-grande' },
-    { name: 'Balcão Check-out com Cestos',  desc: 'Estrutura Reforçada, Gavetas Aramadas',        code: 'MOD-BC-06', img: '06-balcao-checkout-cestos' },
-    { name: 'Balcão Caixa Expositor',       desc: 'Faixa Amarela, Prateleiras em Grade',          code: 'MOD-CE-07', img: '07-balcao-caixa-expositor' },
-    { name: 'Check-out Caixa Premium',      desc: 'MDF com Detalhe Laranja e Monitor',            code: 'MOD-CP-08', img: '08-checkout-caixa-premium' },
-    { name: 'Cesto Aramado 3 Níveis',       desc: 'Base Reforçada com Rodízios',                  code: 'MOD-CA-09', img: '09-cesto-aramado-3-niveis', crop: ['13.77%', '0.11%', '72.46%', '111.58%'] },
-    { name: 'Expositor Giratório',          desc: 'Três Níveis, Ganchos Rotativos',               code: 'MOD-EG-10', img: '10-expositor-giratorio',    crop: ['15.51%', '6.5%',  '68.99%', '106.24%'] },
-    { name: 'Arara Vintage',                desc: 'Acabamento Cobre, Design Retrô',               code: 'MOD-AV-11', img: '11-arara-vintage',          crop: ['16.33%', '8.5%',  '67.33%', '103.69%'] },
-    { name: 'Arara Simples',                desc: 'Estrutura Tubular, Pés em T',                  code: 'MOD-AS-12', img: '12-arara-simples' },
-    { name: 'Arara Reta',                   desc: 'Regulável, Estrutura Leve',                    code: 'MOD-AR-13', img: '13-arara-reta' },
-    { name: 'Arara Dupla com Prateleiras',  desc: 'Dois Níveis, Sapateira Integrada',             code: 'MOD-AD-14', img: '14-arara-dupla-prateleiras' },
-    { name: 'Arara em T',                   desc: 'Braços com Ganchos, Pé Central',               code: 'MOD-AT-15', img: '15-arara-em-t' },
-    { name: 'Arara Semicircular de Parede', desc: 'Fixação em Painel, Aço Cromado',               code: 'MOD-SP-16', img: '16-arara-semicircular-parede' },
-    { name: 'Cesto Aramado',                desc: 'Estrutura em Aço, Rodízios, Uso Versátil',     code: 'MOD-CS-17', img: '17-cesto-aramado', cover: true }
+    { name: 'Gôndola Central',              desc: 'Gôndola central em aço com pintura eletrostática a pó', img: '01-gondola-central-dupla-face' },
+    { name: 'Balcão Check-out Farmácia',    desc: 'Balcão check-out ponto de venda com cesto para varejo e suporte de monitor. Pintura eletrostática a pó', img: '02-balcao-checkout-farmacia' },
+    { name: 'Gôndola de Parede',            desc: 'Gôndola de parede em aço com pintura eletrostática a pó', img: '03-gondola-de-parede' },
+    { name: 'Gôndola Central 2 Lances',     desc: 'Gôndola central em aço com pintura eletrostática a pó — 2 lances', img: '04-gondola-central-grande' },
+    { name: 'Gôndola de Parede 4 Lances',   desc: 'Gôndola de parede em aço com pintura eletrostática a pó — 4 lances', img: '05-gondola-parede-grande' },
+    { name: 'Balcão Caixa 1,30 m',          desc: 'Balcão caixa em aço com pintura eletrostática a pó, com gaveta com chave, cesto para varejo, suporte para monitor e estrutura em tela com ganchos', size: '1,30 × 0,59 × 1,00 × 0,50 m', img: '06-balcao-checkout-cestos' },
+    { name: 'Balcão Caixa 0,96 m',          desc: 'Balcão caixa em aço com pintura eletrostática a pó, com gaveta com chave, cesto para varejo, suporte para monitor e estrutura em tela com ganchos', size: '0,96 × 0,59 × 1,00 × 0,50 m', img: '06-balcao-checkout-cestos' },
+    { name: 'Balcão Gaveteiro',             desc: 'Balcão gaveteiro para armazenagem de comprimidos cartelados. Pintura eletrostática a pó', size: '1,00 × 0,40 × 1,00 m', img: '07-balcao-caixa-expositor' },
+    { name: 'Check-out 1,20 × 0,93 m',      desc: 'Check-out em aço com pintura eletrostática a pó, tampo da pista em aço inox', size: '1,20 × 0,93 × 0,90 m', img: '08-checkout-caixa-premium' },
+    { name: 'Check-out 1,20 × 1,08 m',      desc: 'Check-out em aço com pintura eletrostática a pó, tampo da pista em aço inox', size: '1,20 × 1,08 × 0,90 m', img: '08-checkout-caixa-premium' },
+    { name: 'Cesto Aramado 3 Níveis',       desc: 'Base Reforçada com Rodízios',          img: '09-cesto-aramado-3-niveis', crop: ['13.77%', '0.11%', '72.46%', '111.58%'] },
+    { name: 'Expositor Giratório',          desc: 'Três Níveis, Ganchos Rotativos',       img: '10-expositor-giratorio',    crop: ['15.51%', '6.5%',  '68.99%', '106.24%'] },
+    { name: 'Arara Vintage',                desc: 'Design Retrô',                         img: '11-arara-vintage',          crop: ['16.33%', '8.5%',  '67.33%', '103.69%'] },
+    { name: 'Arara Simples',                desc: 'Estrutura Tubular, Pés em T',          img: '12-arara-simples' },
+    { name: 'Arara Reta',                   desc: 'Regulável, Estrutura Leve',            img: '13-arara-reta' },
+    { name: 'Arara Dupla com Prateleiras',  desc: 'Dois Níveis, Sapateira Integrada',     img: '14-arara-dupla-prateleiras' },
+    { name: 'Arara em T',                   desc: 'Braços com Ganchos, Pé Central',       img: '15-arara-em-t' },
+    { name: 'Arara Semicircular de Parede', desc: 'Fixação em Painel, Aço Cromado',       img: '16-arara-semicircular-parede' },
+    { name: 'Cesto Aramado',                desc: 'Estrutura em Aço, Rodízios, Uso Versátil', img: '17-cesto-aramado', cover: true },
+    { name: 'Balcão PDV em Alumínio',       desc: 'Balcão PDV em alumínio com 1 gaveta com suporte para teclado', size: '0,60 × 1,03 × 0,40 m', img: '18-balcao-caixa-aluminio' },
+    { name: 'Balcão Caixa em MDF',          desc: 'Balcão caixa em MDF com 1 gaveta com porta notas e 1 gaveta com suporte porta teclado', img: '19-balcao-caixa-mdf' },
+    { name: 'Balcão Vitrine',               desc: 'Balcão vitrine com estrutura em MDF, frente, tampo e três prateleiras de vidro', img: '20-balcao-vitrine-vidro' },
+    { name: 'Balcão PDV em MDF',            desc: 'Balcão PDV em MDF com tampo de vidro serigrafado, gaveta porta notas e 1 prateleira', size: '0,60 × 1,03 × 0,40 m', img: '21-balcao-caixa-mdf-compacto' },
+    { name: 'Arara Industrial 2 Níveis',    desc: 'Desmontável', size: '1,96 × 1,20 × 0,45 m', img: '22-arara-industrial-2-niveis' },
+    { name: 'Balcão Vitrine Premium',       desc: 'Alumínio e Vidro',                     img: '23-balcao-vitrine-premium' }
   ];
 
   function renderProducts() {
@@ -70,9 +79,9 @@
       desc.className = 'product-card__desc';
       desc.textContent = p.desc;
 
-      var code = document.createElement('p');
-      code.className = 'product-card__code';
-      code.textContent = 'Código: ' + p.code;
+      var size = document.createElement('p');
+      size.className = 'product-card__size';
+      size.textContent = p.size || 'Medida personalizada para o cliente';
 
       var price = document.createElement('p');
       price.className = 'product-card__price';
@@ -80,7 +89,7 @@
 
       info.appendChild(name);
       info.appendChild(desc);
-      info.appendChild(code);
+      info.appendChild(size);
       info.appendChild(price);
 
       card.appendChild(media);
