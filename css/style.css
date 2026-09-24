@@ -293,6 +293,12 @@ a{color:inherit;}
 .project{margin:0;height:170px;border-radius:var(--r-lg);overflow:hidden;}
 .project img{width:100%;height:100%;object-fit:cover;}
 
+/* Lojas montadas — fotos reais de loja, em retrato 3:4.
+   Cards de proporção fixa para a grade seguir alinhada conforme
+   novas fotos forem somadas. */
+.projects--lojas{background:var(--background);}
+.projects--lojas .project{height:auto;aspect-ratio:3/4;}
+
 /* =====================================================================
    DIFFERENTIALS
    ===================================================================== */
@@ -482,6 +488,7 @@ a{color:inherit;}
   .projects__title{font-size:26px;}
   .projects__gallery{grid-template-columns:repeat(2,1fr);gap:20px;}
   .project{height:190px;}
+  .projects--lojas .projects__gallery{grid-template-columns:repeat(3,1fr);}
 
   /* Differentials */
   .differentials{padding:64px 32px;}
@@ -599,6 +606,7 @@ a{color:inherit;}
   .projects__title{font-size:32px;}
   .projects__gallery{grid-template-columns:repeat(4,1fr);gap:20px;}
   .project{height:220px;}
+  .projects--lojas .projects__gallery{grid-template-columns:repeat(5,1fr);}
 
   /* Differentials */
   .differentials{padding:80px 64px;}

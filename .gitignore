@@ -1,0 +1,5 @@
+.DS_Store
+
+# Fotos originais (brutas) — as versões otimizadas ficam em assets/img/
+novos/
+assets/produtos-novos/
