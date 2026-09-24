@@ -1,6 +1,6 @@
 /* =====================================================================
    ModFix — scripts do site
-   1) Catálogo de produtos (25 itens)
+   1) Catálogo de produtos (27 itens)
    2) Texturas decorativas de quadradinhos
    3) Scroll suave da navegação
    ===================================================================== */
@@ -36,7 +36,9 @@
     { name: 'Balcão Vitrine',               desc: 'Balcão vitrine com estrutura em MDF, frente, tampo e três prateleiras de vidro', img: '20-balcao-vitrine-vidro' },
     { name: 'Balcão PDV em MDF',            desc: 'Balcão PDV em MDF com tampo de vidro serigrafado, gaveta porta notas e 1 prateleira', size: '0,60 × 1,03 × 0,40 m', img: '21-balcao-caixa-mdf-compacto' },
     { name: 'Arara Industrial 2 Níveis',    desc: 'Desmontável', size: '1,96 × 1,20 × 0,45 m', img: '22-arara-industrial-2-niveis' },
-    { name: 'Balcão Vitrine Premium',       desc: 'Alumínio e Vidro',                     img: '23-balcao-vitrine-premium' }
+    { name: 'Balcão Vitrine Premium',       desc: 'Alumínio e Vidro',                     img: '23-balcao-vitrine-premium' },
+    { name: 'Porta-paletes com Gôndola Integrada', desc: 'Porta-paletes com gôndola integrada com apoio para plano metálico. Cores opcionais', img: '24-porta-paletes-gondola-integrada' },
+    { name: 'Porta-palete',                 desc: 'Porta-palete com plano madeira ou plano metálico', img: '25-porta-palete' }
   ];
 
   function renderProducts() {
